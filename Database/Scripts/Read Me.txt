@@ -1,0 +1,1 @@
+first create database then create the tables or copy the *.mdf and log files

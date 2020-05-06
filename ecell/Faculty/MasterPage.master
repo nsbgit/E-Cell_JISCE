@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="PageTitle" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        table.contactTable
+        {
+        border:1px solid black;
+        width:900px;
+        }
+        td.contactTable
+        {
+        border:1px solid black;
+        padding:2px 2px 2px 2px; 
+        }
+        body {
+        font-family: "Trebuchet MS";
+        font-size:16px;
+        color:#717273;
+        }
+    </style>
+</head>
+
+
+
+ <body style="background-image:url(../img/background-21.jpg)">
+    <form runat="server" id="form1">
+        <div style="width:950px; margin:0 auto; margin-top:40px;padding-top:50px;">
+
+
+
+            <div style="width:900px; margin:0 auto;padding-bottom:40px;padding-top:20px;">
+                <asp:ImageMap ID="ImageMap1" runat="server" ImageUrl="~/img/logo.png" ImageAlign="Left"></asp:ImageMap>
+                <asp:ImageMap ID="ImageMap2" runat="server" ImageUrl="~/img/back.jpg" Height="106px" Width="250px" ImageAlign="Right"></asp:ImageMap>
+            </div>
+           
+
+            
+           <div style="width:900px;margin:0 auto;padding-top:90px;">
+                
+                    <asp:Menu ID="Menu1"  runat="server" Orientation="Horizontal" StaticSubMenuIndent="10px" style=" margin:0px auto;" Font-Names="Verdana" Font-Size="Medium" ForeColor="Yellow" Height="58px" RenderingMode="Table" Width="901px" BackColor="#333333" DynamicHorizontalOffset="2">
+                     <DynamicHoverStyle BackColor="#333333" ForeColor="White" />
+                     <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                     <DynamicMenuStyle BackColor="#333333" />
+                     <DynamicSelectedStyle BackColor="#333333" />
+                     
+                      <Items>
+ 
+                        <asp:MenuItem Text="Home" Value="Home" NavigateUrl="mission.aspx">
+                            <asp:MenuItem NavigateUrl="vision.aspx" Text="Vision"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="objective.aspx" Text="Objective"></asp:MenuItem>
+                        </asp:MenuItem>
+
+                        <asp:MenuItem NavigateUrl="SeminarWorkshop.aspx" Text="Seminar & Workshop"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="FacultyFeedbackNQuery.aspx" Text="Feedback"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="FacultyProfile.aspx" Text="Profile"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="about_us.aspx" Text="About Us"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="contact_us.aspx" Text="Contact Us"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="logOut.aspx" Text="Log Out"></asp:MenuItem>
+
+                    </Items>
+
+                     <StaticHoverStyle BackColor="#333333" ForeColor="White" />
+                     <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                     <StaticSelectedStyle BackColor="#333333" />
+                    </asp:Menu>
+
+               
+
+           </div>
+             
+            <div style="min-height:400px;width:900px;margin:0 auto;padding-bottom:90px; padding-top:30px;">
+            
+                 <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" ClientIDMode="AutoID">
+
+                </asp:ContentPlaceHolder>
+            </div>
+          
+
+            
+        </div>
+        <div style="height:100px; margin:0 auto;padding-top:20px; background-color:#333333;">
+                
+                 <div style="width:900px;margin:0 auto;">
+                     <div style="float:left; color:yellow;">
+                         Copyright © 2014 JIS College of Engineering
+                     </div>
+                     <div style="float:right; color:yellow;">
+                         Website developed & maintained by Sukanta Sharma & Akash Pal
+                     </div>
+                     
+                </div>
+        </div>
+    </form>
+</body>
+
+</html>
